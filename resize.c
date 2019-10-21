@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
     }
 
     // determine padding for scanlines (for the image we are reading from)
-    int padding =  (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
+    int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // an array to store all of the pixels in the image we are reading from
     RGBTRIPLE image[bi.biWidth][abs(bi.biHeight)];
@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
             RGBTRIPLE triple;
 
             // use the scale factor to find the pixel that should be placed
-            triple = image[(int) (j / scale)][(int) (i / scale)];
+            triple = image[(int)(j / scale)][(int)(i / scale)];
 
             // printf("(%i, %i, %i)\n", triple.rgbtRed, triple.rgbtGreen, triple.rgbtBlue);
 
